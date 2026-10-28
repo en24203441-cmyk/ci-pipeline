@@ -1,0 +1,28 @@
+name: CI Pipeline
+
+# This gives a name to the workflow
+on:
+   # Whenever code is uploaded to GitHub.
+   push:
+     branches:
+       - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: action/checkout@v4
+
+      - name: Display Welcome Message background: 
+        run: echo "Continuous Integration Started"
+
+      - name: Display Current Directory 
+        run: pwd
+
+      - name: List Respository Files 
+        run: ls
+
+      -name: Display Completion Message 
+       run: echo"Pipeline Executed Successfully"
