@@ -25,4 +25,4 @@ jobs:
         run: ls
 
       -name: Display Completion Message 
-       run: echo"Pipeline Executed Successfully"
+       run: echo "Pipeline Executed Successfully"
