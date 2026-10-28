@@ -1,11 +1,11 @@
 name: CI Pipeline
 
-# This gives a name to the workflow
+# This gives a name to the workflow.
 on:
-   # Whenever code is uploaded to GitHub.
-   push:
-     branches:
-       - main
+  # Whenever code is uploaded to GitHub.
+  push:
+    branches:
+      - main
 
 jobs:
   build:
@@ -13,16 +13,16 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: action/checkout@v4
+        uses: actions/checkout@v4
 
-      - name: Display Welcome Message background: 
+      - name: Display Welcome Message
         run: echo "Continuous Integration Started"
 
-      - name: Display Current Directory 
+      - name: Display Current Directory
         run: pwd
 
-      - name: List Respository Files 
+      - name: List Repository Files
         run: ls
 
-      -name: Display Completion Message 
-       run: echo "Pipeline Executed Successfully"
+      - name: Display Completion Message
+        run: echo "Pipeline Executed Successfully"
